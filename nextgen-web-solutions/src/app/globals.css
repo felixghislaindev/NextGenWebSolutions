@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --gradient-start: 255, 100, 255;
+    --gradient-end: 100, 100, 255;
+  }
+}
+
+.hero-gradient {
+  background: radial-gradient(
+    circle at top center,
+    rgba(var(--gradient-start), 0.1) 0%,
+    rgba(var(--gradient-end), 0.05) 100%
+  );
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #ff64ff, #6464ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
