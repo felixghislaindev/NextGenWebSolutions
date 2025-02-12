@@ -122,7 +122,7 @@ export default function Footer() {
         </div>
         <div className="mt-8 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center">
           <p className="text-slate-400 text-sm">
-            © 2023 NextGen Web Solutions. All rights reserved.
+            © 2025 NextGen Web Solutions. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0 flex space-x-6">
             <Link

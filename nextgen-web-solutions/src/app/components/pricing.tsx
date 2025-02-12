@@ -57,7 +57,7 @@ export default function Pricing() {
           </h2>
           <p className="text-slate-300 max-w-2xl mx-auto">
             Start with our free tier to experience our quality service. Upgrade
-            when you're ready.
+            when you&apos;re ready.
           </p>
         </div>
 

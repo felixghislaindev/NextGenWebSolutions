@@ -32,7 +32,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Let's Build Something Amazing Together
+              Let&apos;s Build Something Amazing Together
             </h2>
             <p className="text-slate-300 mb-6">
               Ready to transform your online presence? Get in touch with us to
@@ -150,7 +150,7 @@ export default function Contact() {
 
             {submitStatus === "success" && (
               <p className="text-green-400 text-center">
-                Thank you! We'll get back to you soon.
+                Thank you! We&apos;ll get back to you soon.
               </p>
             )}
 
