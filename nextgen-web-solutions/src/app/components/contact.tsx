@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Send } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const [formState, setFormState] = useState({
@@ -20,10 +21,29 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setSubmitStatus("success");
-    setIsSubmitting(false);
+    try {
+      // Replace these with your EmailJS credentials
+      const serviceId = "service_tvw26ag";
+      const templateId = "template_d7sd7wi";
+      const publicKey = "LE_Vbj67xUjLrYh1-";
+
+      // Send the email using EmailJS
+      await emailjs.send(serviceId, templateId, formState, publicKey);
+
+      // Reset the form and show success message
+      setFormState({
+        name: "",
+        email: "",
+        company: "",
+        message: "",
+      });
+      setSubmitStatus("success");
+    } catch (error) {
+      console.error("Error sending email:", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -46,7 +66,7 @@ export default function Contact() {
                 <div className="ml-4">
                   <h3 className="text-white font-medium">Email Us</h3>
                   <p className="text-slate-300">
-                    contact@nextgenwebsolutions.com
+                    nextgenwebsolutionscontact@gmail.com
                   </p>
                 </div>
               </div>
