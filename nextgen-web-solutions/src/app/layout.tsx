@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import type React from "react";
-
+import { Analytics } from "@vercel/analytics/next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -26,7 +26,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-slate-950`}>{children}</body>
+      <body className={`${inter.className} bg-slate-950`}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
